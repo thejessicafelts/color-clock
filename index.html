@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color Changing Clock with JavaScript</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/function.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <ul class="top-level">
+          <li class="link"><a href="#" title="There are no Previous Projects" class="prev-project nav-unselectable"><< Previous</a></li>
+          <li class="link"><a href="http://thejessicafelts.github.io/apps" title="View all Applications" class="all-projects">View All Projects</a></li>
+          <li class="link"><a href="#" title="There are no Next Projects" class="next-project nav-unselectable">Next >></a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="main-container">
+      <div class="description-container">
+        <h2 class="project-title">Color-Changing Clock</h2>
+        <h3 class="date"><span class="bold">Created On:</span> May 18, 2016</h3>
+        <p class="project-description">This color-changing clock is controled by JavaScript.</p>
+        <p class="project-description">This application is based on the tutorial <span class="bold"><a href="https://www.youtube.com/watch?v=V2xVkb-_ySY" target="blank">JavaScript and the DOM (Part 2 of 2)</a></span> put out by the  DevTips YouTube channel.</p>
+        <p class="project-description">In this tutorial, viewers were taught how to create this color-changing clock, and then display the hours, minutes, and seconds (in military time), as a color hex code. For example, 2:27:46pm (which is 14:27:46 in military time) would display in the application as "#142746", and produce a deep blue color. This clock was originally inteded to cover an entire page, with the application itself loading onto the body, instead of a seperate div.</p>
+        <p class="project-description">For my version of this application, I modified the JavaScript so that not only would the time be displayed, but it would be displayed as a 12-hour clock, instead of 24-hour military time. Since this is a 12-hour clock, I also added functionality to include either "am" or "pm" at the end of the time, depending on the time of day the clock is viewed.</p>
+        <p class="project-description"><span class="bold">Update - May 20, 2016:</span></p>
+        <p class="project-description">After a day of this appication being live, and reveiving feedback on it, I've decided to make a few minor changes. The first is that, I have decided to change the "am" or "pm" designation from lowercase to uppercase, to make the entire line of text appear more uniform, and the second change is that I've decided to add the hex color beneith the time, so that viewers won't have to convert numbers in their head.</p>
+        <p class="project-description">Additionally, I've modified the JavaScript so that instead of adding the text via "textContent" it will be added via "innerHTML". This has allowed me to be able to specify that the time should be wrapped in an H2 tag with the class of "time", and the hex color code wrapped in an H3 tag, with the class of "hex-code". This change has allowed me to each individually, with CSS.</p>
+      </div>
+      <div class="circle-container">
+        <div id="circle" class="unselectable" onload="function.js"></div>
+        <div id="additional-info">
+          <div id="other-information">
+            <ul>
+              <li class="link project-github"><a href="http://www.github.com/thejessicafelts/thejessicafelts.github.io/tree/master/apps/color-clock" target="_blank">View this Project on Github</a></li>
+              <li class="divider">|</li>
+              <li class="link project-html"><a href="http://www.github.com/thejessicafelts/thejessicafelts.github.io/tree/master/apps/color-clock/index.html" target="_blank">HTML</a></li>
+              <li class="divider">|</li>
+              <li class="link project-css"><a href="http://www.github.com/thejessicafelts/thejessicafelts.github.io/tree/master/apps/color-clock/assets/css/main.css" target="_blank">CSS</a></li>
+              <li class="divider">|</li>
+              <li class="link project-js"><a href="http://www.github.com/thejessicafelts/thejessicafelts.github.io/tree/master/apps/color-clock/assets/js/function.js" target="_blank">JavaScript</a></li>
+            </ul>
+          </div>
+          <div class="issues-resolutions">
+            <h2 class="sidebar-title">Issues &amp; Resolutions</h2>
+            <div class="issue-wrapper">
+              <p class="ticket"><a href="https://github.com/thejessicafelts/thejessicafelts.github.io/issues/3" target="_blank">Extra "0"</a></p>
+              <p class="issue">When the PM time is later than 10:00pm, the time gets an extra "0" appended to the beginning of it. This issue does not seem to be present during the AM.</p>
+              <p class="status"><span class="bold">Status: </span>Resolved</p>
+            </div>
+            <div class="issue-wrapper">
+              <p class="ticket"><a href="https://github.com/thejessicafelts/thejessicafelts.github.io/issues/4" target="_blank">startClick/stopClick Not Working</a></p>
+              <p class="issue">The JS functions "startClick" and "stopClick" are not working. When the application is clicked once, the clock should stop counting; when the application is double-clicked, the clock should jump to the correct time, and start counting again. Nothing is happening when the application is clicked or double-clicked.</p>
+              <p class="status"><span class="bold">Status: </span>Open</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
